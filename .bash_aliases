@@ -1,0 +1,9 @@
+alias activate="source ./.venv/bin/activate"
+alias gdb="gdb -q"
+alias clc='clear'
+alias mv='mv -i'
+alias cp='cp -i'
+alias ln='ln -i'
+alias lr='ls -t | head -n 5'
+alias watch='watch -n1'
+alias diff='diff --color'
