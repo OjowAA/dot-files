@@ -180,12 +180,13 @@ function __setprompt
 # PROMPT_COMMAND=__command_rprompt
 
 # if nerd font installed
-PS1='\n\[\e[38;5;31m\]\[\e[0;48;5;31m\]󰣇 \u\[\e[38;5;97m\]\[\e[0;48;5;97m\] \w \[\e[0;38;5;97m\]\[\e[0m\] '
-
-# else
-# PS1='\n\[\e[1;92m\]\u@\h\[\e[0m\]:\[\e[38;5;39m\]\w\[\e[0m\]\$ '
-# PS1='\[\e[38;5;40;1m\][\u]\[\e[0m\] \[\e[38;5;33;1m\]\w\$\[\e[0m\] '
-# PROMPT_COMMAND='__setprompt'
+if fc-list | grep -qi "Nerd Font"; then
+	PS1='\n\[\e[38;5;31m\]\[\e[0;48;5;31m\]󰣇 \u\[\e[38;5;97m\]\[\e[0;48;5;97m\] \w \[\e[0;38;5;97m\]\[\e[0m\] '
+else
+	PS1='\n\[\e[1;92m\]\u@\h\[\e[0m\]:\[\e[38;5;39m\]\w\[\e[0m\]\$ '
+	#PS1='\[\e[38;5;40;1m\][\u]\[\e[0m\] \[\e[38;5;33;1m\]\w\$\[\e[0m\] '
+	# PROMPT_COMMAND='__setprompt'
+fi
 
 # History settings (optional but useful)
 HISTSIZE=1000
