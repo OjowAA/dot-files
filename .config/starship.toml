@@ -1,0 +1,51 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+continuation_prompt = '> '
+
+format = """
+$os\
+$username\
+$hostname\
+$localip\
+$directory\
+$vcsh\
+$git_branch\
+$java\
+$nodejs\
+$php\
+$rust\
+$sudo\
+$time\
+$status\
+$container\
+$jobs\
+$character\
+"""
+
+[username]
+style_user = 'bold 34'
+show_always = false
+format = '[$user]($style) '
+
+[os]
+disabled = true
+format = '[$type](bold 202) '
+
+[character]
+success_symbol = "\\$"
+error_symbol = "\\$"
+vimcmd_symbol = "\\$"
+
+[jobs]
+format = '[$symbol$number]($style) '
+style = 'bold green'
+symbol = '◊'
+disabled = false
+
+[directory]
+style = 'bold blue'
+truncation_symbol = '.../'
+
+[git_branch]
+format = '[\[$branch(:$remote_branch)\]]($style) '
+style = 'bold red'
