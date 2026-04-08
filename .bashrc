@@ -46,7 +46,7 @@ HISTSIZE=2000
 HISTFILESIZE=6000
 HISTCONTROL=ignoredups:erasedups
 shopt -s histappend
-PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+#PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 if (command -v starship > /dev/null); then
 	eval "$(starship init bash)"
