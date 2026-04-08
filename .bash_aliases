@@ -9,8 +9,9 @@ alias .....='cd ../../../..'
 
 alias activate="source ./.venv/bin/activate"
 alias gdb="gdb -q"
-alias clc='clear'
-alias c='clear'
+alias clear='clear -x'
+alias clc='clear -x'
+alias c='clear -x'
 alias mv='mv -i -v'
 alias cp='cp -v'
 alias rm='rm -i -v'
@@ -34,14 +35,13 @@ alias paste='xclip -o'
 alias copywd='pwd | xclip -i'
 alias pastewd='cd $(xclip -o)'
 
-alias v='nvim'
-alias vi='nvim'
-alias vim='nvim'
 alias more='less'
 alias chx='chmod +x'
 
 alias ip4='ip -o -4 addr show | awk "{print NR\": \"\$2\": \"\$4}"'
 alias ipa='ip -o -4 addr show | awk "{print NR\": \"\$2\": \"\$4}"'
+
+alias tmuxattach='tmux attach -t'
 
 # Color for manpages in less makes manpages a little easier to read
 export LESS_TERMCAP_mb=$'\E[01;31m'
