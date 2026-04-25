@@ -17,6 +17,8 @@ alias cp='cp -v'
 alias rm='rm -i -v'
 alias ln='ln -i'
 
+# some more ls aliases
+alias l='ls -CF'
 alias lr='ls -t | head -n 5'
 alias la='ls -Alh' # show hidden files
 alias lu='du -sh * | sort -h' 
@@ -27,7 +29,7 @@ alias diff='diff --color'
 alias ports='nmap localhost'
 alias untar='tar -zxvf'
 
-alias venv='python3 -m venv venv; source ./venv/bin/activate'
+alias venv='python3 -m venv .venv; source ./.venv/bin/activate'
 alias serve='python3 -m http.server 8000'
 
 alias copy='xclip -i'
@@ -41,7 +43,7 @@ alias chx='chmod +x'
 alias ip4='ip -o -4 addr show | awk "{print NR\": \"\$2\": \"\$4}"'
 alias ipa='ip -o -4 addr show | awk "{print NR\": \"\$2\": \"\$4}"'
 
-alias tmuxattach='tmux attach -t'
+alias tmuxatt='tmux attach -t'
 
 # Color for manpages in less makes manpages a little easier to read
 export LESS_TERMCAP_mb=$'\E[01;31m'
