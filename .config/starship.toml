@@ -27,11 +27,13 @@ $character\
 style = 'green bold'
 format = '[(\($virtualenv\) )]($style)'
 
-
 [username]
 style_user = 'bold 34'
 show_always = false
-format = '[$user]($style) '
+format = '[$user]($style)'
+
+[hostname]
+ssh_symbol = '@'
 
 [os]
 disabled = true
@@ -51,6 +53,7 @@ disabled = false
 [directory]
 style = 'bold blue'
 truncation_symbol = '.../'
+
 
 [git_branch]
 format = '[\[$branch(:$remote_branch)\]]($style) '
