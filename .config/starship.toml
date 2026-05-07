@@ -2,21 +2,32 @@
 
 continuation_prompt = '> '
 
+# # 2 line prompt
+# format = """
+# ╭── \
+# $os\
+# $username\
+# $hostname\
+# $directory\
+# $git_branch\
+# $java$nodejs$php$rust$python\
+# $sudo\
+# $status\
+# \n╰─⮞ \
+# $container\
+# $jobs\
+# $character\
+# """
+
+# 1 line prompt
 format = """
 $os\
 $username\
 $hostname\
-$localip\
 $directory\
-$vcsh\
 $git_branch\
-$java\
-$nodejs\
-$php\
-$rust\
-$python\
+$java$nodejs$php$rust$python\
 $sudo\
-$time\
 $status\
 $container\
 $jobs\
@@ -33,7 +44,9 @@ show_always = false
 format = '[$user]($style)'
 
 [hostname]
+style = 'green bold'
 ssh_symbol = '@'
+format = '$ssh_symbol[$hostname]($style):'
 
 [os]
 disabled = true
@@ -53,7 +66,6 @@ disabled = false
 [directory]
 style = 'bold blue'
 truncation_symbol = '.../'
-
 
 [git_branch]
 format = '[\[$branch(:$remote_branch)\]]($style) '
