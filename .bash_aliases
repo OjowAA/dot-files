@@ -29,6 +29,7 @@ alias diff='diff --color'
 alias ports='nmap localhost'
 alias untar='tar -zxvf'
 
+alias cdtmp='cd $(mktemp -d)'
 alias venv='python3 -m venv .venv; source ./.venv/bin/activate'
 alias serve='python3 -m http.server 8000'
 

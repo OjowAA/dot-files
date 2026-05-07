@@ -41,7 +41,7 @@ format = '[(\($virtualenv\) )]($style)'
 [username]
 style_user = 'green'
 show_always = false
-format = '[$user]($style)'
+format = '[$user]($style) '
 
 [hostname]
 style = 'green'
