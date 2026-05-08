@@ -1,8 +1,12 @@
 #!/bin/bash
 
-mkdir -p ~/.config
-cp -r ./dot-files/.config/. ~/.config/
-ln -sf ./dot-files/.bash_aliases ~/.bash_aliases
+REPO_DIR="$(pwd)"
 
-ln -sf ./dot-files/.zshrc ~/.zshrc
-ln -sf ./dot-files/.bashrc ~/.bashrc
+mkdir -p "$HOME/.config"
+
+cp -r "$REPO_DIR/.config" "$HOME/.config"
+
+ln -sf "$REPO_DIR/.bash_aliases" "$HOME/.bash_aliases"
+ln -sf "$REPO_DIR/.zshrc" "$HOME/.zshrc"
+ln -sf "$REPO_DIR/.bashrc" "$HOME/.bashrc"
+echo "[!] Updated dotfiles in $HOME"
