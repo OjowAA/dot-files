@@ -5,10 +5,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# Set the default editor
-EDITOR=vim
-VISUAL=vim
-
 if [ -f /usr/share/bash-completion/bash_completion ]; then
 	. /usr/share/bash-completion/bash_completion
 elif [ -f /etc/bash_completion ]; then
@@ -46,8 +42,11 @@ HISTSIZE=2000
 HISTFILESIZE=6000
 HISTCONTROL=ignoredups:erasedups
 shopt -s histappend
-#PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 if (command -v starship > /dev/null); then
 	eval "$(starship init bash)"
 fi
+
+# Set the default editor
+EDITOR=vim
+VISUAL=vim

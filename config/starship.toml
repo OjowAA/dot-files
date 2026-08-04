@@ -26,7 +26,7 @@ $username\
 $hostname\
 $directory\
 $git_branch\
-$java$nodejs$php$rust$python\
+$nodejs$rust$python\
 $sudo\
 $status\
 $container\
