@@ -21,6 +21,7 @@ fi
 mkdir -p "$HOME/.config"
 cp -a "$REPO_DIR/config/." "$HOME/.config/"
 cp -a "$REPO_DIR/homerc/.bash_aliases" "$HOME/.bash_aliases"
+cp -a "$REPO_DIR/homerc/.vimrc" "$HOME/.vimrc"
 
 for file in .bashrc .zshrc; do
     if [[ -e "$HOME/$file" ]]; then
